@@ -23,10 +23,8 @@ export class LoginComponent {
     }
     this.service.singIn(loger).subscribe({
       next: (el : any )=> {
-        console.log(el.user)
-        console.log(el.user.email)
-        this.service.storageUser(el.user.email)
-        //this.route.navigateByUrl("");
+        this.service.isLogged = true;
+        this.service.storageUser(el.user.email);
       },
       error:() => {
         //TODO: inserire dialog errore

@@ -1,0 +1,14 @@
+<div style="height:300vh ">
+    <div class="bg" [ngStyle]="{'background-image': 'url('+bgTest+')'}">
+        <app-logo></app-logo>
+        <app-navbar></app-navbar>
+
+        <div class="buttons" >
+            <button (click)="up()" class="button-immages" ><</button>
+            <button (click)="down()" class="button-immages" >></button> 
+        </div>
+        
+    </div>
+
+    <app-footer></app-footer>
+</div>

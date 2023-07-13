@@ -1,0 +1,48 @@
+.nav-gestion * {
+    color: white;
+    background-color: #493d6d;
+}
+
+.dd-no{
+    display: block;
+    height: 50px;
+    width: 100px;
+    background-image: url("../../../assets/imgs/logo-senza-sfondo.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+
+.img-nav{
+    height: 1rem;
+}
+
+.siky-position{
+   position: sticky;
+    top: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+
+    .dd-no{
+        display: none;
+    }
+    
+    .nav-gestion{
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-ul{
+        width: 50%;
+        max-width: 50rem;
+        justify-content: space-around;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+
+}

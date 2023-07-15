@@ -1,0 +1,21 @@
+.section{
+    display: flex;
+}
+
+.insert{
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.dotter {
+    border: 1px dotted black;
+    background-color: gray;
+}
+
+.item-section{
+    border: 1px solid black;
+}

@@ -20,12 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy{
     }
   });
 
-  ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
-    this.interval.closed;
-  }
+  ngOnInit(): void {}
 
   index : number = 0;
   bgImmages1 : string[] =[
@@ -61,8 +56,7 @@ export class HomeComponent implements OnInit, OnDestroy{
     this.bgTest = this.bgImmages1[this.index];
   }
 
-
-  timeOutImmage(){
-
+  ngOnDestroy(): void {
+    this.interval.closed;
   }
 }

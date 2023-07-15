@@ -23,6 +23,9 @@
           <li class="nav-item">
             <a class="nav-link">Contatti</a>
           </li>
+          <li *ngIf="isLog()" >
+              <a routerLink="/edit">edit</a>
+          </li>
         </ul>
       </div>
     </div>

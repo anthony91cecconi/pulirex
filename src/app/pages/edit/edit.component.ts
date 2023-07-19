@@ -7,9 +7,4 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent {
-  menu1 = new FormGroup({});
-
-  home1(){
-    console.log(this.home1);
-  }
 }

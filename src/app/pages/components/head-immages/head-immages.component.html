@@ -1,0 +1,6 @@
+<div class="bg" [ngStyle]="{'background-image': 'url('+bgTest+')'}">
+    <div class="buttons" *ngIf="bgImmages.length > 1">
+        <button (click)="up(true)" class="button-immages" ><</button>
+        <button (click)="down(true)" class="button-immages" >></button> 
+    </div>
+</div>

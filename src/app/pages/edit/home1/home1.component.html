@@ -1,0 +1,30 @@
+<section class="item-section" >
+    <h1 class="text-center" > immagini principale della home </h1>
+    <div class="section" >
+        <div class="insert text-center" >
+            <form>
+                <input  class=" dotter " type="file" formControlName="immagine" >
+                <button  > button </button>
+            </form>
+        </div>
+        <div class="p-2">
+            <div *ngIf="!preview || preview != undefined ; else preview">
+                <p>
+                    inserire una nuova immagine per la home principale,
+                    o modificare o eliminare quelle gia esistenti
+                </p>
+            </div>
+            <ng-template #preview>
+                <img [src]=" preview " alt="">
+            </ng-template>
+            
+            
+        </div>
+    </div>
+    <h2> immagini gia esistenti </h2>
+    <div>
+        <div>
+            riquadro (attualmente non ci sono immagini caricate nel cloud)
+        </div>
+    </div>
+</section>

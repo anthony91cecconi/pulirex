@@ -1,14 +1,34 @@
-<div style="height:300vh ">
-    <div class="bg" [ngStyle]="{'background-image': 'url('+bgTest+')'}">
-        <app-logo></app-logo>
-        <app-navbar></app-navbar>
+<div>
+    <app-navbar></app-navbar>
+    <app-head-immages [data]=" bgImmages "></app-head-immages>
 
-        <div class="buttons" >
-            <button (click)="up(true)" class="button-immages" ><</button>
-            <button (click)="down(true)" class="button-immages" >></button> 
+    <div class="text-container p-5" >
+        <div class="text-center max-width">
+            <h1> Pulirex: Impresa di Pulizie Roma </h1>
+            <h2> subtitle </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatem quasi, voluptate fuga hic beatae delectus sed molestias cupiditate obcaecati modi ea dolorem, dolor aliquid consequatur, sit consequuntur! Eius, qui?</p>
+            <button> APPROFONDISCI </button>
         </div>
         
+
+    </div>
+    <div style="height: 40vh;width: 100%;">
+        <div class="back-fixded text-container" [ngStyle]="{'background-image': 'url(https://picsum.photos/id/1/200/300)'}">
+            <div>
+               <h1> "citazione " </h1>
+                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime a distinctio ex nemo officiis </p>
+            </div>
+        </div>
     </div>
 
+    <div class="text-center" >
+        <div>
+            <a class="maps-link" href="">
+                <h1><span style="color: red;">Dove</span> Siamo</h1>
+                <hr style="width: 10%;color:red">
+                <img class="maps" src="https://picsum.photos/id/1/200/300" alt="mappa"> 
+            </a>
+        </div>
+    </div>
     <app-footer></app-footer>
 </div>

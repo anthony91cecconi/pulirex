@@ -13,6 +13,10 @@ import { environment } from 'src/environments/environment.development';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './pages/edit/edit.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { Home1Component } from './pages/edit/home1/home1.component';
+//import { provideStorage, getStorage } from '@angular/fire/storage';
+import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
+import { HeadImmagesComponent } from './pages/components/head-immages/head-immages.component'
 
 @NgModule({
   declarations: [
@@ -22,14 +26,18 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     LoginComponent,
     EditComponent,
-    FooterComponent
+    FooterComponent,
+    Home1Component,
+    ChisiamoComponent,
+    HeadImmagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    //provideStorage(()=> getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]

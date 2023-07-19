@@ -1,0 +1,28 @@
+.footer{
+    background-color: #44538e;
+}
+
+.wh{
+    color: white;
+}
+
+.dib{
+    display: inline-block;
+    text-align: initial;
+    list-style: none;
+}
+
+.black-row{
+    background-color: black;
+    width: 100%;
+    color: white;
+    display: flex ;
+    justify-content: center;
+    align-content: center;
+}
+
+@media screen and (min-width: 992px) {
+    .display-responsive{
+        display: inline-block;
+    }
+}

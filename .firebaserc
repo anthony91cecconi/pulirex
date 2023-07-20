@@ -1,5 +1,8 @@
 {
-    "projects": {
-        "default": "pulirex"
-    }
+  "projects": {
+    "default": "pulirex-21e94",
+    "y": "pulirex-21e94"
+  },
+  "targets": {},
+  "etags": {}
 }

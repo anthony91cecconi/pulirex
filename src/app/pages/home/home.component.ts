@@ -15,4 +15,11 @@ export class HomeComponent {
     "https://picsum.photos/id/237/200/300"
   ];
 
+
+  textGost = [
+    {
+      title: "prova1",
+      content: "questo è un testo di prova"
+    }
+  ]
 }

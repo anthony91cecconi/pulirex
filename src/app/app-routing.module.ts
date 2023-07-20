@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { EditComponent } from './pages/edit/edit.component';
 import { guardGuard } from './services/guard.guard';
 import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
+import { ServiceComponent } from './pages/service/service.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
     path: "edit",
     canActivate: [guardGuard],
     component:EditComponent  
+  },
+  {
+    path: "test",
+    canActivate: [guardGuard],
+    component:ServiceComponent  
   },
   {path:"**" , redirectTo: "login"}
 ];

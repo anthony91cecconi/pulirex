@@ -1,0 +1,24 @@
+<div style="height: 40vh;width: 100%;">
+    <div class="back-fixded text-container" [ngStyle]="{'background-image': 'url(https://picsum.photos/id/1/200/300)'}">
+        <div *ngIf="texts.length > 1 else soloOrNull" class="ghost-control" >
+            <div class="carosel" >
+                <
+            </div>
+            <div class="text-center pt-5">
+                <h1 class="red" > {{text?.title}} </h1>
+                <p> {{text?.content}}</p>
+            </div>
+            <div class="carosel" >
+                >
+            </div>
+        </div>
+        <ng-template #soloOrNull class="ghost-control">
+            <div>
+                <h1> {{text?.title}} </h1>
+                <p> {{text?.content}}</p>
+            </div>
+        </ng-template>
+    </div>
+    
+    
+</div>

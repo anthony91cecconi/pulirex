@@ -1,4 +1,28 @@
-<div class="bg" [ngStyle]="{'background-image': 'url('+bgTest+')'}">
+<div class="bg pt-5" [ngStyle]="{'background-image': 'url('+bgTest+')'}">
+    <div class=" d-flex justify-content-between">
+        <div class="d-inline-block col-6 text-center" >
+            <h1 class="red">titolo 1</h1>
+            <p class="white">visibile solo se esiste</p> 
+        </div>
+        <div class="d-inline-block col-6 text-center" >
+            <h1 class="red">titolo 2</h1>
+            <p class="white">visibile solo se esiste</p> 
+        </div>
+    </div>
+    <div class="mt-5 d-flex justify-content-center">
+        
+        <div class="d-inline-block col-6 text-center" >
+            <h1 class="red">titolo 3</h1>
+            <p class="white">visibile solo se esiste</p> 
+        </div>
+    </div>
+    <div class="mt-5 d-flex justify-content-start">
+        <div class="d-inline-block col-6 text-center" >
+            <h1 class="red">titolo 4</h1>
+            <p class="white">visibile solo se esiste</p> 
+        </div>
+    </div>
+
     <div class="buttons" *ngIf="bgImmages.length > 1">
         <button (click)="up(true)" class="button-immages" ><</button>
         <button (click)="down(true)" class="button-immages" >></button> 

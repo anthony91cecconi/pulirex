@@ -28,6 +28,14 @@
     padding: 0;
 }
 
+.dropdown-menu{
+    left: 50%;
+}
+
+.hov-link:hover{
+    background-color: aqua;
+}
+
 @media screen and (min-width: 992px) {
 
     .dd-no{

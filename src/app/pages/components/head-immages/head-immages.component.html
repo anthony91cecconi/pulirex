@@ -1,25 +1,25 @@
-<div class="bg pt-5" [ngStyle]="{'background-image': 'url('+bgTest+')'}">
+<div class="bg pt-5" [ngStyle]="{'background-image': 'url('+ bgTest.immageUrl +')'}">
     <div class=" d-flex justify-content-between">
         <div class="d-inline-block col-6 text-center" >
-            <h1 class="red">titolo 1</h1>
-            <p class="white">visibile solo se esiste</p> 
+            <h1 class="red">{{ bgTest.titleOne }}</h1>
+            <p class="white"> {{ bgTest.textOne }} </p> 
         </div>
         <div class="d-inline-block col-6 text-center" >
-            <h1 class="red">titolo 2</h1>
-            <p class="white">visibile solo se esiste</p> 
+            <h1 class="red">{{ bgTest.titleTwo }}</h1>
+            <p class="white"> {{ bgTest.textTwo }} </p> 
         </div>
     </div>
     <div class="mt-5 d-flex justify-content-center">
         
         <div class="d-inline-block col-6 text-center" >
-            <h1 class="red">titolo 3</h1>
-            <p class="white">visibile solo se esiste</p> 
+            <h1 class="red">{{ bgTest.titleTree }}</h1>
+            <p class="white"> {{ bgTest.textTree }} </p> 
         </div>
     </div>
     <div class="mt-5 d-flex justify-content-start">
         <div class="d-inline-block col-6 text-center" >
-            <h1 class="red">titolo 4</h1>
-            <p class="white">visibile solo se esiste</p> 
+            <h1 class="red">{{ bgTest.titleFour }}</h1>
+            <p class="white"> {{ bgTest.textFour }} </p> 
         </div>
     </div>
 

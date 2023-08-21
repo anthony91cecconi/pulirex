@@ -6,16 +6,28 @@ import { EditComponent } from './pages/edit/edit.component';
 import { guardGuard } from './services/guard.guard';
 import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
 import { ServiceComponent } from './pages/service/service.component';
+import { HeadImmagesEditsComponent } from './pages/edit/head-immages-edits/head-immages-edits.component';
 
 const routes: Routes = [
   {
     path: "" , 
-    canActivate: [guardGuard],
+    //canActivate: [guardGuard],
     component: HomeComponent
   },
   {
+    path:"edit",
+    //canActivate: [guardGuard],
+    component:EditComponent,
+    children: [
+      {
+        path:"head-home",
+        component: HeadImmagesEditsComponent
+      }
+    ]
+  },
+  {
     path: "chi-siamo",
-    canActivate: [guardGuard],
+    //canActivate: [guardGuard],
     component: ChisiamoComponent
   },
   {
@@ -24,12 +36,12 @@ const routes: Routes = [
   },
   {
     path: "edit",
-    canActivate: [guardGuard],
+    //canActivate: [guardGuard],
     component:EditComponent  
   },
   {
     path: "test",
-    canActivate: [guardGuard],
+    //canActivate: [guardGuard],
     component:ServiceComponent  
   },
   {path:"**" , redirectTo: "login"}

@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
+import { HomeImmageIntesation } from 'src/app/models/home.immages.model';
 
 @Component({
   selector: 'app-head-immages',
@@ -10,15 +11,27 @@ export class HeadImmagesComponent implements OnInit, OnDestroy{
   @Input() data : any;
 
   
-  bgImmages! :string[]; 
+  bgImmages! :HomeImmageIntesation[]; 
   index:number;
-  bgTest : string;
+  bgTest : HomeImmageIntesation;
     
   manual : boolean = false;
 
   constructor(){
     this.index= 0;
-    this.bgTest= "";
+    this.bgTest= {
+      id: null,
+      title : "prova1",
+      immageUrl : "https://picsum.photos/id/1/200/300",
+      titleOne :null,
+      textOne : null,
+      titleTwo : null,
+      textTwo : null,
+      titleTree : null,
+      textTree : null,
+      titleFour : null,
+      textFour :null
+    };
   }
 
 

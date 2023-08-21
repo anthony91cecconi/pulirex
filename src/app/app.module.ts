@@ -13,13 +13,13 @@ import { environment } from 'src/environments/environment.development';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './pages/edit/edit.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { Home1Component } from './pages/edit/home1/home1.component';
-//import { provideStorage, getStorage } from '@angular/fire/storage';
 import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
 import { HeadImmagesComponent } from './pages/components/head-immages/head-immages.component';
 import { GostBakcGroundComponent } from './pages/components/gost-bakc-ground/gost-bakc-ground.component';
 import { ServiceComponent } from './pages/service/service.component';
-import { SplitTextComponent } from './pages/components/split-text/split-text.component'
+import { SplitTextComponent } from './pages/components/split-text/split-text.component';
+import { HeadImmagesEditsComponent } from './pages/edit/head-immages-edits/head-immages-edits.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,12 +30,12 @@ import { SplitTextComponent } from './pages/components/split-text/split-text.com
     LoginComponent,
     EditComponent,
     FooterComponent,
-    Home1Component,
     ChisiamoComponent,
     HeadImmagesComponent,
     GostBakcGroundComponent,
     ServiceComponent,
-    SplitTextComponent
+    SplitTextComponent,
+    HeadImmagesEditsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,7 @@ import { SplitTextComponent } from './pages/components/split-text/split-text.com
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ReactiveFormsModule,
-    //provideStorage(()=> getStorage())
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

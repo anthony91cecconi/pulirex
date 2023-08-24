@@ -20,6 +20,7 @@ import { ServiceComponent } from './pages/service/service.component';
 import { SplitTextComponent } from './pages/components/split-text/split-text.component';
 import { HeadImmagesEditsComponent } from './pages/edit/head-immages-edits/head-immages-edits.component'
 import { HttpClientModule } from '@angular/common/http';
+import { MissionComponent } from './pages/components/mission/mission.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     GostBakcGroundComponent,
     ServiceComponent,
     SplitTextComponent,
-    HeadImmagesEditsComponent
+    HeadImmagesEditsComponent,
+    MissionComponent
   ],
   imports: [
     BrowserModule,

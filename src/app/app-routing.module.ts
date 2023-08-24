@@ -30,10 +30,10 @@ const routes: Routes = [
     //canActivate: [guardGuard],
     component: ChisiamoComponent
   },
-  {
+  /*{
     path: "login", 
     component:LoginComponent
-  },
+  },*/
   {
     path: "edit",
     //canActivate: [guardGuard],

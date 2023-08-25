@@ -10,6 +10,7 @@ import { HomeImmageIntesation } from 'src/app/models/home.immages.model';
 export class HomeComponent {
 
   bgImmages: HomeImmageIntesation[] =[
+    /*
     {
       id:null,
       title : "prova1",
@@ -48,7 +49,7 @@ export class HomeComponent {
       textTree : "testo della prova 3",
       titleFour : null,
       textFour :null
-    }
+    }*/
   ];
 
 

@@ -1,7 +1,7 @@
 <div>
     <app-navbar></app-navbar>
-    <!-- <app-head-immages [data]=" bgImmages "></app-head-immages>-->
-    <app-mission></app-mission>
+    <app-head-immages *ngIf="bgImmages.length > 0" [data]=" bgImmages "></app-head-immages>
+    <app-mission *ngIf="bgImmages.length == 0"  ></app-mission>
     <div class="d-flex justify-content-center p-5" >
         <div class="text-center max-width">
             <h1> Pulirex: Impresa di Pulizie Roma </h1>

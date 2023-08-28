@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="buttons" *ngIf="bgImmages.length > 1">
+    <div class="buttons" *ngIf=" bgImmages && bgImmages.length > 1">
         <button (click)="up(true)" class="button-immages" ><</button>
         <button (click)="down(true)" class="button-immages" >></button> 
     </div>

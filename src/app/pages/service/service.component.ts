@@ -11,4 +11,11 @@ export class ServiceComponent {
     "https://picsum.photos/id/10/200/300"
   ];
 
+  textGost = [
+    {
+      title: "prova1",
+      content: "questo è un testo di prova"
+    }
+  ]
+
 }

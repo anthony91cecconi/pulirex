@@ -12,4 +12,11 @@ export class ChisiamoComponent {
     "https://picsum.photos/id/1/200/300"
   ];
 
+  textGost = [
+    {
+      title: "prova1",
+      content: "questo è un testo di prova"
+    }
+  ]
+
 }

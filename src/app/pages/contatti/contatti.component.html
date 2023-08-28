@@ -1,0 +1,135 @@
+<app-navbar></app-navbar>
+<div class="d-flex justify-content-center">
+
+
+   <form style="max-width: 30rem;">   
+        <h2>PREVENTIVI SERVIZI</h2>
+        <- barra progresso ->
+        <div [class]="show == 0? '':'d-none'" >
+            <p>a quali servizzi sei interessato?</p>
+            <label for="Giardinaggio"> Giardinaggio
+                <input type="checkbox" name="Giardinaggio" id="">
+            </label>
+            <label for="Disinfestazione">Disinfestazione
+                <input type="checkbox" name="Disinfestazione" id="">
+            </label>
+            <label for="pulizia">Servizio di pulizia
+                <input type="checkbox" name="+pulizia" id="">
+            </label>
+            <div class="d-flex justify-content-between">
+                <button>INDIETRO</button>
+                <button >AVANTI</button>
+            </div>
+        </div>
+        <div [class]="show == 1? '':'d-none'" >
+            <p>A chi invieremo il preventivo?</p>
+            <label for="name">
+                <input type="text" name="name" placeholder="nome" id="">
+            </label>
+            <label for="surname">
+                <input type="text" name="surname" placeholder="cognome" id="">
+            </label>
+            <label for="email">
+                <input type="email" name="email" placeholder="email" id="">
+            </label>
+            <label for="telephon">
+                <input type="number" name="prefix" placeholder="39">
+                <input type="number" name="telephon" placeholder="333 3333 3333">
+            </label>
+            <div class="d-flex justify-content-between">
+                <button>INDIETRO</button>
+                <button >AVANTI</button>
+            </div>
+        </div>
+        <div [class]="show == 2? '':'d-none'" >
+            <p>Sei un'azienda, un privato o richiedi il servizio per conto di un Ente Pubblico?</p>
+            <label for="tipe">
+                <div>
+                    <input type="radio" name="tipe" value="Azienda" >
+                    <span>Azienda</span>
+                </div>
+                <div>
+                    <input type="radio" name="tipe" value="Privato">
+                    <span>Privato</span>
+                </div>                
+                <div>
+                    <input type="radio" name="tipe" value="Ente">
+                    <span>Ente Pubblico</span>
+                </div>         
+            </label>
+            <div class="d-flex justify-content-between">
+                <button>INDIETRO</button>
+                <button >AVANTI</button>
+            </div>
+        </div>
+        <div [class]="show == 3? '':'d-none'" >
+            <p>Sei interessato a un singolo intervento o a un piano di mantenimento delle aree verdi?</p>
+            <label for="times">
+                <div>
+                    <input type="radio" name="times" value="intervento" >
+                    <span>un intervento</span>
+                </div>
+                <div>
+                    <input type="radio" name="times" value="intervento-3-6">
+                    <span>Dai 3 ai 6 interventi</span>
+                </div>                
+                <div>
+                    <input type="radio" name="times" value="intervento-6-12">
+                    <span>Dai 6 ai 12 interventi</span>
+                </div>    
+                <div>
+                    <input type="radio" name="times" value="intervento-12+">
+                    <span>oltre i 12 interenti</span>
+                </div>       
+            </label>
+            <div class="d-flex justify-content-between">
+                <button>INDIETRO</button>
+                <button >AVANTI</button>
+            </div>
+        </div>
+        <div [class]="show == 4? '':'d-none'" >
+            <p>Per quali tipologie di interventi vorresti ricevere il preventivo?</p>
+
+                <input type="text">
+
+                <button>INDIETRO</button>
+                <button >AVANTI</button>
+        </div>
+        <div [class]="show == 5? '':'d-none'" >
+            <p>Presso quale indirizzo sarà effettuato l'intervento?</p>
+            <label for="addres">
+                <input type="text" name="addres" placeholder="via" id="">
+            </label>
+            <label for="addres-number">
+                <input type="number" name="addres-number" placeholder="1" id="">
+            </label>
+            <label for="city">
+                <input type="text" name="city" placeholder="email" id="">
+            </label>
+            <label for="province">
+                <input type="text" name="province" placeholder="39">
+            </label>
+            <label for="cap">
+                <input type="text" name="cap" placeholder="00010">
+            </label>
+            <label for="nation">
+                <input type="text" name="nation" placeholder="italia">
+            </label>
+
+            <div class="d-flex justify-content-between">
+                <button>INDIETRO</button>
+                <button >AVANTI</button>
+            </div>
+        </div>
+        <div [class]="show == 6? '':'d-none'" >
+            <p>Vuoi aggiungere altre informazioni alla tua richiesta? (opzionale)</p>
+            <textarea name="descrizione" id="" cols="30" rows="10"></textarea>
+            <div class="d-flex justify-content-between">
+                <button>INDIETRO</button>
+                <button>INVIA</button>
+            </div>
+        </div>
+   </form>
+
+</div>
+<app-footer></app-footer>

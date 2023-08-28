@@ -21,6 +21,7 @@ import { SplitTextComponent } from './pages/components/split-text/split-text.com
 import { HeadImmagesEditsComponent } from './pages/edit/head-immages-edits/head-immages-edits.component'
 import { HttpClientModule } from '@angular/common/http';
 import { MissionComponent } from './pages/components/mission/mission.component';
+import { ContattiComponent } from './pages/contatti/contatti.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MissionComponent } from './pages/components/mission/mission.component';
     ServiceComponent,
     SplitTextComponent,
     HeadImmagesEditsComponent,
-    MissionComponent
+    MissionComponent,
+    ContattiComponent
   ],
   imports: [
     BrowserModule,

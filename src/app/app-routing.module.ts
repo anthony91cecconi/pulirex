@@ -7,6 +7,7 @@ import { guardGuard } from './services/guard.guard';
 import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { HeadImmagesEditsComponent } from './pages/edit/head-immages-edits/head-immages-edits.component';
+import { ContattiComponent } from './pages/contatti/contatti.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,11 @@ const routes: Routes = [
     path: "test",
     //canActivate: [guardGuard],
     component:ServiceComponent  
+  },
+  {
+    path: "contatti",
+    //canActivate: [guardGuard],
+    component:ContattiComponent  
   },
   {path:"**" , redirectTo: "login"}
 ];

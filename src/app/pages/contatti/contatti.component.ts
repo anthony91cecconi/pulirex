@@ -9,7 +9,7 @@ export class ContattiComponent {
 
   show : number = 0;
 
-  progress():void{
+  next():void{
     this.show++
   }
 

@@ -2,11 +2,11 @@
 <div class="d-flex justify-content-center">
 
 
-   <form style="max-width: 30rem;">   
+   <form style="max-width: 30rem;">
         <h2>PREVENTIVI SERVIZI</h2>
         <- barra progresso ->
         <div [class]="show == 0? '':'d-none'" >
-            <p>a quali servizzi sei interessato?</p>
+            <p>a quali servizi sei interessato?</p>
             <label for="Giardinaggio"> Giardinaggio
                 <input type="checkbox" name="Giardinaggio" id="">
             </label>
@@ -18,7 +18,7 @@
             </label>
             <div class="d-flex justify-content-between">
                 <button>INDIETRO</button>
-                <button >AVANTI</button>
+                <button  (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 1? '':'d-none'" >
@@ -38,7 +38,7 @@
             </label>
             <div class="d-flex justify-content-between">
                 <button>INDIETRO</button>
-                <button >AVANTI</button>
+                <button  (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 2? '':'d-none'" >
@@ -51,15 +51,15 @@
                 <div>
                     <input type="radio" name="tipe" value="Privato">
                     <span>Privato</span>
-                </div>                
+                </div>
                 <div>
                     <input type="radio" name="tipe" value="Ente">
                     <span>Ente Pubblico</span>
-                </div>         
+                </div>
             </label>
             <div class="d-flex justify-content-between">
                 <button>INDIETRO</button>
-                <button >AVANTI</button>
+                <button  (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 3? '':'d-none'" >
@@ -72,19 +72,19 @@
                 <div>
                     <input type="radio" name="times" value="intervento-3-6">
                     <span>Dai 3 ai 6 interventi</span>
-                </div>                
+                </div>
                 <div>
                     <input type="radio" name="times" value="intervento-6-12">
                     <span>Dai 6 ai 12 interventi</span>
-                </div>    
+                </div>
                 <div>
                     <input type="radio" name="times" value="intervento-12+">
                     <span>oltre i 12 interenti</span>
-                </div>       
+                </div>
             </label>
             <div class="d-flex justify-content-between">
                 <button>INDIETRO</button>
-                <button >AVANTI</button>
+                <button  (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 4? '':'d-none'" >
@@ -93,7 +93,7 @@
                 <input type="text">
 
                 <button>INDIETRO</button>
-                <button >AVANTI</button>
+                <button  (click)="next()" >AVANTI</button>
         </div>
         <div [class]="show == 5? '':'d-none'" >
             <p>Presso quale indirizzo sarà effettuato l'intervento?</p>
@@ -118,7 +118,7 @@
 
             <div class="d-flex justify-content-between">
                 <button>INDIETRO</button>
-                <button >AVANTI</button>
+                <button  (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 6? '':'d-none'" >
@@ -126,7 +126,7 @@
             <textarea name="descrizione" id="" cols="30" rows="10"></textarea>
             <div class="d-flex justify-content-between">
                 <button>INDIETRO</button>
-                <button>INVIA</button>
+                <button (click)="next()" >INVIA</button>
             </div>
         </div>
    </form>

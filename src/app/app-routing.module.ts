@@ -8,12 +8,18 @@ import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { HeadImmagesEditsComponent } from './pages/edit/head-immages-edits/head-immages-edits.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
+import { PulizieComponent } from './pages/pulizie/pulizie.component';
 
 const routes: Routes = [
   {
     path: "" , 
     //canActivate: [guardGuard],
     component: HomeComponent
+  },
+  {
+    path: "services/pulizie" , 
+    //canActivate: [guardGuard],
+    component: PulizieComponent
   },
   {
     path:"edit",

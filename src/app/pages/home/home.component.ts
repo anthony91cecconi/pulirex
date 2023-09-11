@@ -56,7 +56,8 @@ export class HomeComponent {
   textGost = [
     {
       title: "prova1",
-      content: "questo è un testo di prova"
+      content: "questo è un testo di prova",
+      immage:"../../../assets/imgs/home.jpg"
     }
   ]
 }

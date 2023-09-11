@@ -23,4 +23,5 @@ export class GostBakcGroundComponent implements OnInit{
 type text = {
   title:string;
   content:string;
+  immage: string;
 }

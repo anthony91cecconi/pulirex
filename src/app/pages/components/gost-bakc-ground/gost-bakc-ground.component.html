@@ -1,5 +1,5 @@
 <div style="height: 40vh;width: 100%;">
-    <div class="back-fixded text-container" [ngStyle]="{'background-image': 'url(https://picsum.photos/id/1/200/300)'}">
+    <div class="back-fixded text-container" [ngStyle]="{'background-image': 'url('+text?.immage+')'}">
         <div *ngIf="texts && texts.length > 1 else soloOrNull" class="ghost-control" >
             <div class="carosel" >
                 <

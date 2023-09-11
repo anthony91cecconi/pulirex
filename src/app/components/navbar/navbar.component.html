@@ -9,26 +9,26 @@
       <div class="collapse navbar-collapse nav-gestion" id="navbarNav">
         <ul class="navbar-nav nav-ul">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="chi-siamo">Chi siamo</a>
+            <a class="nav-link" href="chi-siamo">Chi siamo</a>
           </li>
-          <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             I nostri servizi
           </a>
           <ul class="dropdown-menu">
             <!-- TODO: collegare con DB -->
-            <li><a class="dropdown-item hov-link" routerLink="test">Action</a></li>
-            <li><a class="dropdown-item hov-link" routerLink="#">Action</a></li>
-            <li><a class="dropdown-item hov-link" routerLink="#">Action</a></li>
-            <li><a class="dropdown-item hov-link" routerLink="#">Action</a></li>
+            <li><a class="dropdown-item hov-link" href="services/pulizie">Pulizie</a></li>
+            <li><a class="dropdown-item hov-link" href="#">Action</a></li>
+            <li><a class="dropdown-item hov-link" href="#">Action</a></li>
+            <li><a class="dropdown-item hov-link" href="#">Action</a></li>
           </ul>
           <li class="nav-item">
-            <a class="nav-link" routerLink="contatti">Contatti</a>
+            <a class="nav-link" href="contatti">Contatti</a>
           </li>
           <li *ngIf="isLog()" >
-              <a routerLink="/edit">edit</a>
+              <a href="/edit">edit</a>
           </li>
         </ul>
       </div>

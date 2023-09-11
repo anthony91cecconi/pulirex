@@ -7,34 +7,26 @@ import { HomeImmageIntesation } from 'src/app/models/home.immages.model';
   templateUrl: './head-immages.component.html',
   styleUrls: ['./head-immages.component.scss']
 })
-export class HeadImmagesComponent implements OnInit, OnDestroy{
+export class HeadImmagesComponent implements OnInit {//, OnDestroy{
   @Input() data : any;
 
   
   bgImmages! :HomeImmageIntesation[]; 
   index:number;
-  bgTest : HomeImmageIntesation;
+  bgTest!: HomeImmageIntesation;
     
   manual : boolean = false;
 
   constructor(){
     this.index= 0;
-    this.bgTest= {
-      id: null,
-      title : "prova1",
-      immageUrl : "https://picsum.photos/id/1/200/300",
-      titleOne :null,
-      textOne : null,
-      titleTwo : null,
-      textTwo : null,
-      titleTree : null,
-      textTree : null,
-      titleFour : null,
-      textFour :null
-    };
   }
-
-
+  ngOnInit(): void {
+      this.bgImmages = this.data;
+      console.log("data----",this.data);
+      this.bgTest = this.bgImmages[this.index];
+      console.log(" bg test ---- ",this.bgTest)
+    }
+  
   interval = interval(10000).subscribe({
     next: (i)=>{
       if(this.bgImmages.length < 2){
@@ -52,10 +44,7 @@ export class HeadImmagesComponent implements OnInit, OnDestroy{
     this.interval.unsubscribe();
   }
 
-  ngOnInit(): void {
-    this.bgImmages = this.data;
-    this.bgTest = this.bgImmages[this.index];
-  }
+  
 
   up(m:boolean){
     if( this.bgImmages && this.index >= this.bgImmages.length ){
@@ -84,5 +73,11 @@ export class HeadImmagesComponent implements OnInit, OnDestroy{
   ngOnDestroy(): void {
     this.interval.unsubscribe();
   }
+
+  bgReturn() :string{
+
+    return `url(${this.bgTest})`
+  }
+  
 }
 

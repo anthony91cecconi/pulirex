@@ -22,6 +22,7 @@ import { HeadImmagesEditsComponent } from './pages/edit/head-immages-edits/head-
 import { HttpClientModule } from '@angular/common/http';
 import { MissionComponent } from './pages/components/mission/mission.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
+import { PulizieComponent } from './pages/pulizie/pulizie.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ContattiComponent } from './pages/contatti/contatti.component';
     SplitTextComponent,
     HeadImmagesEditsComponent,
     MissionComponent,
-    ContattiComponent
+    ContattiComponent,
+    PulizieComponent
   ],
   imports: [
     BrowserModule,

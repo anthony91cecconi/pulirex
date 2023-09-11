@@ -1,4 +1,5 @@
-<div class="bg pt-5" [ngStyle]="{'background-image': 'url('+ bgTest.immageUrl +')'}">
+
+<div class="bg pt-5" [ngStyle]="{'background-image': bgReturn()}">
     <div class=" d-flex justify-content-between">
         <div class="d-inline-block col-6 text-center" >
             <h1 class="red">{{ bgTest.titleOne }}</h1>
@@ -27,4 +28,4 @@
         <button (click)="up(true)" class="button-immages" ><</button>
         <button (click)="down(true)" class="button-immages" >></button> 
     </div>
-</div>
+</div>--

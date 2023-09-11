@@ -1,27 +1,36 @@
 <app-navbar></app-navbar>
-<div class="d-flex justify-content-center">
+<div class="container-fluid formi">
 
-
-   <form style="max-width: 30rem;">
-        <h2>PREVENTIVI SERVIZI</h2>
-        <- barra progresso ->
-        <div [class]="show == 0? '':'d-none'" >
-            <p>a quali servizi sei interessato?</p>
-            <label for="Giardinaggio"> Giardinaggio
-                <input type="checkbox" name="Giardinaggio" id="">
-            </label>
-            <label for="Disinfestazione">Disinfestazione
-                <input type="checkbox" name="Disinfestazione" id="">
-            </label>
-            <label for="pulizia">Servizio di pulizia
-                <input type="checkbox" name="+pulizia" id="">
-            </label>
-            <div class="d-flex justify-content-between">
-                <button>INDIETRO</button>
-                <button  (click)="next()" >AVANTI</button>
+   <form class="container ">
+        <div class="col-11 flexxo">
+            <div class="">
+                <h2 class="font" >PREVENTIVI SERVIZI</h2>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 16%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">16%</div>
+                </div>
+            </div>
+            <div class="container-fluid mirko" [class]="show == 0? '':'d-none'" >
+                <span class="margine fontt">a quali servizi sei interessato?
+                    <label class="margine fontt" for="Giardinaggio"> Giardinaggio
+                        <input  type="checkbox" name="Giardinaggio" id="">
+                    </label>
+                    <label class="margin fontt" for="Disinfestazione">Disinfestazione
+                        <input type="checkbox" name="Disinfestazione" id="">
+                    </label>
+                    <label class="margine fontt" for="pulizia">Servizio di pulizia
+                        <input type="checkbox" name="+pulizia" id="">
+                    </label>
+                </span>
+                
+                <div class="margine" class="d-flex justify-content-between">
+                    <button type="button ton" (click)="back()">INDIETRO</button>
+                    <button type="button ton" (click)="next()" >AVANTI</button>
+                </div>
             </div>
         </div>
+
         <div [class]="show == 1? '':'d-none'" >
+            <div class="progress-bar" role="progressbar" style="width: 32%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">32%</div>
             <p>A chi invieremo il preventivo?</p>
             <label for="name">
                 <input type="text" name="name" placeholder="nome" id="">
@@ -37,11 +46,12 @@
                 <input type="number" name="telephon" placeholder="333 3333 3333">
             </label>
             <div class="d-flex justify-content-between">
-                <button>INDIETRO</button>
-                <button  (click)="next()" >AVANTI</button>
+                <button type="button" (click)="back()">INDIETRO</button>
+                <button type="button" (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 2? '':'d-none'" >
+            <div class="progress-bar" role="progressbar" style="width: 48%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">48%</div>
             <p>Sei un'azienda, un privato o richiedi il servizio per conto di un Ente Pubblico?</p>
             <label for="tipe">
                 <div>
@@ -58,11 +68,12 @@
                 </div>
             </label>
             <div class="d-flex justify-content-between">
-                <button>INDIETRO</button>
-                <button  (click)="next()" >AVANTI</button>
+                <button type="button" (click)="back()">INDIETRO</button>
+                <button type="button" (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 3? '':'d-none'" >
+            <div class="progress-bar" role="progressbar" style="width: 64%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">64%</div>
             <p>Sei interessato a un singolo intervento o a un piano di mantenimento delle aree verdi?</p>
             <label for="times">
                 <div>
@@ -83,17 +94,18 @@
                 </div>
             </label>
             <div class="d-flex justify-content-between">
-                <button>INDIETRO</button>
-                <button  (click)="next()" >AVANTI</button>
+                <button type="button" (click)="back()">INDIETRO</button>
+                <button type="button" (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 4? '':'d-none'" >
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
             <p>Per quali tipologie di interventi vorresti ricevere il preventivo?</p>
 
                 <input type="text">
 
-                <button>INDIETRO</button>
-                <button  (click)="next()" >AVANTI</button>
+                <button type="button"(click)="back()">INDIETRO</button>
+                <button type="button"(click)="next()" >AVANTI</button>
         </div>
         <div [class]="show == 5? '':'d-none'" >
             <p>Presso quale indirizzo sarà effettuato l'intervento?</p>
@@ -117,19 +129,22 @@
             </label>
 
             <div class="d-flex justify-content-between">
-                <button>INDIETRO</button>
-                <button  (click)="next()" >AVANTI</button>
+                <button type="button"(click)="back()">INDIETRO</button>
+                <button type="button" (click)="next()" >AVANTI</button>
             </div>
         </div>
         <div [class]="show == 6? '':'d-none'" >
+            <div class="progress-bar" role="progressbar" style="width: 96%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">96%</div>
             <p>Vuoi aggiungere altre informazioni alla tua richiesta? (opzionale)</p>
             <textarea name="descrizione" id="" cols="30" rows="10"></textarea>
             <div class="d-flex justify-content-between">
-                <button>INDIETRO</button>
-                <button (click)="next()" >INVIA</button>
+                <button type="button"(click)="back()">INDIETRO</button>
+                <button type="submit"  >INVIA</button>
             </div>
         </div>
    </form>
-
+   
 </div>
-<app-footer></app-footer>
+<div class="container-fluid color">
+    <app-footer></app-footer>
+</div>

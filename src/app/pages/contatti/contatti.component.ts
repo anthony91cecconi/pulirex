@@ -13,7 +13,7 @@ export class ContattiComponent {
     this.show++
   }
 
-  backProgress():void{
+  back():void{
     this.show--;
   }
 

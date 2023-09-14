@@ -1,31 +1,46 @@
 <app-navbar></app-navbar>
 <div class="container-fluid formi">
 
-   <form class="container col-11 flexxo">
-        <div class="">
+   <form class="container col-12 flexxo">
+        <div class=" col-12">
             <div class="">
-                <h2 class="font" >PREVENTIVI SERVIZI</h2>
+                <h2 class="font" style="text-align: center; color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 280%; padding-top: 5%; padding-bottom: 2%;">PREVENTIVI SERVIZI</h2>
+
+                <hr>
+                <br>
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 16%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">16%</div>
                 </div>
+                <br>
+                <hr>
+                <br>
             </div>
             
             <!--scaglione 1-->
             <div class="container-fluid mirko" [class]="showControl(1,null)" >
-                <span class="margine fontt">a quali servizi sei interessato? </span>
-                <label for="type">pulizia
-                   <input type="radio" name="type" (click)="changeType('pul')" value="pulizia"> 
-                </label>
-
-                <label for="type">giardinaggio
-                    <input type="radio" name="type" (click)="changeType('gia')" value="giardinaggio"> 
-                </label>
+                <span class="margine fontt" style="font-size: xx-large; padding-top: 1%; padding-left: 2%; padding-bottom: 4%;">a quali servizi sei interessato? </span>
+                <hr>
+                <br>
+                <div class="col-12" style="display: flex; flex-direction: row;">
+                    <span class="col-4">pulizia   
+                        <label for="type">
+                            <input type="radio" name="type" (click)="changeType('pul')" value="pulizia"> 
+                        </label>
+                    </span>
                 
-                <label for="type">controllo degli infestanti
-                <input type="radio" name="type" (click)="changeType('con')" value="controllo degli infestanti"> 
-                </label>
+                    <span class="col-4">giardinaggio 
+                        <label for="type">
+                            <input type="radio" name="type" (click)="changeType('gia')" value="giardinaggio"> 
+                        </label>
+                    </span>
                 
-                <div class="margine" class="d-flex justify-content-between">
+                    <span class="col-4" style="padding-bottom: 5%;">controllo degli infestanti 
+                        <label for="type">
+                            <input type="radio" name="type" (click)="changeType('con')" value="controllo degli infestanti"> 
+                        </label>
+                    </span>
+                </div>
+                <div class="margine" style="padding-bottom: 10%;" class="d-flex justify-content-between">
                     <button type="button" (click)="back()">INDIETRO</button>
                     <button type="button" (click)="next()" >AVANTI</button>
                 </div>
@@ -230,6 +245,5 @@
    </form>
 
 </div>
-<div class="container-fluid color">
-    <app-footer></app-footer>
-</div>
+
+   <!--<app-footer></app-footer> -->

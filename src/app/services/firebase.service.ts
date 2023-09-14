@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { HomeImmageIntesation } from '../models/home.immages.model';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { Preventivo } from '../models/prevent.model';
+import { Preventive } from '../models/prevent.model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +31,7 @@ export class FirebaseService {
     return this.http.post("gs://pulirex-21e94.appspot.com" + path + "/.json", file);
   }
 
-  insertRequestPreventivo(path : string,body: Preventivo ){
+  insertRequestPreventivo(path : string,body: Preventive ){
     console.log("quasi")
     return this.http.post( "https://pulirex-21e94-default-rtdb.firebaseio.com"+path+ "/.json", body  )
   }

@@ -25,7 +25,7 @@ export class ContattiComponent {
         "surname" : new FormControl("test"),
         "email" : new FormControl("test"),
         "prefix" : new FormControl("test"),
-        "telephon" : new FormControl("test"),
+        "telephon" : new FormControl(1),
         // tipo cliente
         "typeCustomer" : new FormControl("test"),
         // cadenza interventi
@@ -34,7 +34,7 @@ export class ContattiComponent {
         "dettail" : new FormControl("test"),
         // indirizzo interventi
         "addres" : new FormControl("test"),
-        "addres-number" : new FormControl("test"),
+        "addres-number" : new FormControl(1),
         "city" : new FormControl("test"),
         "province" : new FormControl("test"),
         "cap" : new FormControl("test"),

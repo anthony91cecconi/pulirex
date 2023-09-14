@@ -1,4 +1,4 @@
-   export interface Preventivo{
+   export interface Preventive{
     //a quali servizi sei interessato?
     "ssi" : string,
     //dettagli

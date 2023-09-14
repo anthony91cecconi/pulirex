@@ -9,6 +9,8 @@ import { ServiceComponent } from './pages/service/service.component';
 import { HeadImmagesEditsComponent } from './pages/edit/head-immages-edits/head-immages-edits.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
 import { PulizieComponent } from './pages/pulizie/pulizie.component';
+import { PreventiviComponent } from './pages/preventivi/preventivi.component';
+import { PreventivoComponent } from './pages/preventivi/preventivo/preventivo.component';
 
 const routes: Routes = [
   {
@@ -37,20 +39,20 @@ const routes: Routes = [
     //canActivate: [guardGuard],
     component: ChisiamoComponent
   },
+  {
+    path: "preventivi",
+    //canActivate: [guardGuard],
+    component: PreventiviComponent,
+  },
   /*{
     path: "login", 
     component:LoginComponent
-  },*/
-  {
-    path: "edit",
-    //canActivate: [guardGuard],
-    component:EditComponent  
   },
   {
     path: "test",
     //canActivate: [guardGuard],
     component:ServiceComponent  
-  },
+  },*/
   {
     path: "contatti",
     //canActivate: [guardGuard],

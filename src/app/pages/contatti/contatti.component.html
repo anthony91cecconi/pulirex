@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="container-fluid formi">
 
-   <form class="container col-11 flexxo">
+   <form class="container col-11 flexxo" [formGroup]="mail">
         <div class="">
             <div class="">
                 <h2 class="font" >PREVENTIVI SERVIZI</h2>
@@ -10,24 +10,26 @@
                 </div>
             </div>
             
+            <!--<button type="button" (click)="test()">test in console</button>-->
+
             <!--scaglione 1-->
             <div class="container-fluid mirko" [class]="showControl(1,null)" >
                 <span class="margine fontt">a quali servizi sei interessato? </span>
                 <label for="type">pulizia
-                   <input type="radio" name="type" (click)="changeType('pul')" value="pulizia"> 
+                   <input type="radio" formControlName="ssi" (click)="changeType('pul')" value="pulizia"> 
                 </label>
 
                 <label for="type">giardinaggio
-                    <input type="radio" name="type" (click)="changeType('gia')" value="giardinaggio"> 
+                    <input type="radio" formControlName="ssi" (click)="changeType('gia')" value="giardinaggio"> 
                 </label>
                 
                 <label for="type">controllo degli infestanti
-                <input type="radio" name="type" (click)="changeType('con')" value="controllo degli infestanti"> 
+                <input type="radio" formControlName="ssi" (click)="changeType('con')" value="controllo degli infestanti"> 
                 </label>
                 
                 <div class="margine" class="d-flex justify-content-between">
                     <button type="button" (click)="back()">INDIETRO</button>
-                    <button type="button" (click)="next()" >AVANTI</button>
+                    <button type="button" (click)="next()" [disabled]="mail.get('ssi')?.pristine">AVANTI</button>
                 </div>
             </div>
 
@@ -36,20 +38,20 @@
             <div class="container-fluid mirko" [class]="showControl(2,'pul')" >
 
                 <label for="type">pulizia condominiale
-                    <input type="radio" name="subType" value="pulizia condominiale"> 
+                    <input type="radio" formControlName="subType" value="pulizia condominiale"> 
                 </label>
 
                 <label for="type">Sgrosso industrial
-                    <input type="radio" name="subType" value="Sgrosso industriale"> 
+                    <input type="radio" formControlName="subType" value="Sgrosso industriale"> 
                 </label>
                 
                 <label for="type">Sgrosso civile
-                <input type="radio" name="subType" value="Sgrosso civile"> 
+                <input type="radio" formControlName="subType" value="Sgrosso civile"> 
                 </label>
 
                 <div class="margine" class="d-flex justify-content-between">
                     <button type="button" (click)="back()">INDIETRO</button>
-                    <button type="button" (click)="next()" >AVANTI</button>
+                    <button type="button" (click)="next()" [disabled]="mail.get('subType')?.pristine" >AVANTI</button>
                 </div>
             </div>
 
@@ -58,24 +60,24 @@
             <div class="container-fluid mirko" [class]="showControl(2,'gia')" >
 
                 <label for="type">Realizzazione o cura giardinaggio privato
-                    <input type="radio" name="subType" value="Realizzazione o cura giardinaggio privato"> 
+                    <input type="radio" formControlName="subType" value="Realizzazione o cura giardinaggio privato"> 
                 </label>
 
                 <label for="type">Cura del verde condominialel
-                    <input type="radio" name="subType" value="Cura del verde condominiale"> 
+                    <input type="radio" formControlName="subType" value="Cura del verde condominiale"> 
                 </label>
                 
                 <label for="type">Trattamenti fitosanitari
-                    <input type="radio" name="subType" value="Trattamenti fitosanitari"> 
+                    <input type="radio" formControlName="subType" value="Trattamenti fitosanitari"> 
                 </label>
 
                 <label for="type">Potatura ad alto fusto
-                    <input type="radio" name="subType" value="Potatura ad alto fusto"> 
+                    <input type="radio" formControlName="subType" value="Potatura ad alto fusto"> 
                 </label>
 
                 <div class="margine" class="d-flex justify-content-between">
                     <button type="button" (click)="back()">INDIETRO</button>
-                    <button type="button" (click)="next()" >AVANTI</button>
+                    <button type="button" (click)="next()" [disabled]="mail.get('subType')?.pristine" >AVANTI</button>
                 </div>
             </div>
 
@@ -84,24 +86,24 @@
             <div class="container-fluid mirko" [class]="showControl(2,'con')" >
 
                 <label for="type">Derattizzazione
-                    <input type="radio" name="subType" value="Derattizzazione"> 
+                    <input type="radio" formControlName="subType" value="Derattizzazione"> 
                 </label>
                 
                 <label for="type">Disinfestazione insetti alati
-                    <input type="radio" name="subType" value="Disinfestazione insetti alati"> 
+                    <input type="radio" formControlName="subType" value="Disinfestazione insetti alati"> 
                 </label>
 
                 <label for="type">o	Debiattizzazione
-                    <input type="radio" name="subType" value="o	Debiattizzazione"> 
+                    <input type="radio" formControlName="subType" value="o	Debiattizzazione"> 
                 </label>
 
                 <label for="type">Allontanamento volatili
-                    <input type="radio" name="subType" value="Allontanamento volatili"> 
+                    <input type="radio" formControlName="subType" value="Allontanamento volatili"> 
                 </label>
 
                 <div class="margine" class="d-flex justify-content-between">
                     <button type="button" (click)="back()">INDIETRO</button>
-                    <button type="button" (click)="next()" >AVANTI</button>
+                    <button type="button" (click)="next()" [disabled]="mail.get('subType')?.pristine" >AVANTI</button>
                 </div>
             </div>
 
@@ -111,25 +113,34 @@
                 <p>A chi invieremo il preventivo?</p>
 
                 <label for="name">
-                    <input type="text" name="name" placeholder="nome">
+                    <input type="text" formControlName="name" placeholder="nome">
                 </label>
 
                 <label for="surname">
-                    <input type="text" name="surname" placeholder="cognome">
+                    <input type="text" formControlName="surname" placeholder="cognome">
                 </label>
 
                 <label for="email">
-                    <input type="email" name="email" placeholder="email">
+                    <input type="email" formControlName="email" placeholder="email">
                 </label>
 
                 <label for="telephon">
-                    <input type="number" name="prefix" placeholder="+39" [defaultValue]="+39">
-                    <input type="number" name="telephon" placeholder="333 3333 3333">
+                    <input type="number" formControlName="prefix" [defaultValue]="+39">
+                    <input type="number" formControlName="telephon" placeholder="333 3333 3333">
                 </label>
 
                 <div class="d-flex justify-content-between">
                     <button type="button" (click)="back()">INDIETRO</button>
-                    <button type="button" (click)="next()" >AVANTI</button>
+                    <button
+                        type="button" 
+                        (click)="next()" 
+                        [disabled]="(
+                            mail.get('name')?.pristine &&
+                            mail.get('surname')?.pristine &&
+                            mail.get('email')?.pristine &&
+                            mail.get('telephon')?.pristine)">
+                        AVANTI
+                    </button>
                 </div>
 
             </div>
@@ -141,21 +152,21 @@
                 <p>Sei un'azienda, un privato o richiedi il servizio per conto di un Ente Pubblico?</p>
                 <label for="typeCustomer">
                     <div>
-                        <input type="radio" name="typeCustomer" value="Azienda" >
+                        <input type="radio" formControlName="typeCustomer" value="Azienda" >
                         <span>Azienda</span>
                     </div>
                     <div>
-                        <input type="radio" name="typeCustomer" value="Privato">
+                        <input type="radio" formControlName="typeCustomer" value="Privato">
                         <span>Privato</span>
                     </div>
                     <div>
-                        <input type="radio" name="typeCustomer" value="Ente">
+                        <input type="radio" formControlName="typeCustomer" value="Ente">
                         <span>Ente Pubblico</span>
                     </div>
                 </label>
                 <div class="d-flex justify-content-between">
                     <button type="button" (click)="back()">INDIETRO</button>
-                    <button type="button" (click)="next()" >AVANTI</button>
+                    <button type="button" (click)="next()" [disabled]="mail.get('typeCustomer')?.pristine">AVANTI</button>
                 </div>
             </div>
 
@@ -165,25 +176,25 @@
                 <p>Sei interessato a un singolo intervento o a un piano di mantenimento delle aree verdi?</p>
                 <label for="times">
                     <div>
-                        <input type="radio" name="times" value="intervento" >
+                        <input type="radio" formControlName="times" value="intervento" >
                         <span>un intervento</span>
                     </div>
                     <div>
-                        <input type="radio" name="times" value="interventi:3-6">
+                        <input type="radio" formControlName="times" value="interventi:3-6">
                         <span>Dai 3 ai 6 interventi</span>
                     </div>
                     <div>
-                        <input type="radio" name="times" value="interventi:6-12">
+                        <input type="radio" formControlName="times" value="interventi:6-12">
                         <span>Dai 6 ai 12 interventi</span>
                     </div>
                     <div>
-                        <input type="radio" name="times" value="interventi:12+">
+                        <input type="radio" formControlName="times" value="interventi:12+">
                         <span>oltre i 12 interenti</span>
                     </div>
                 </label>
                 <div class="d-flex justify-content-between">
                     <button type="button" (click)="back()">INDIETRO</button>
-                    <button type="button" (click)="next()" >AVANTI</button>
+                    <button type="button" (click)="next()" [disabled]="mail.get('times')?.pristine">AVANTI</button>
                 </div>
             </div>
 
@@ -192,14 +203,14 @@
                 <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
                 <p>inserire maggiori dettagli per l'intervento</p>
 
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="dettail" cols="30" rows="10"></textarea>
 
                 <button type="button"(click)="back()">INDIETRO</button>
                 <button type="button"(click)="next()" >AVANTI</button>
             </div>
 
             <!--scaglione - 7 - indirizzo -->
-            <div [class]="showControl(7,null)" >
+            <div [class]="" >
                 <p>Presso quale indirizzo sarà effettuato l'intervento?</p>
                 <label for="addres">
                     <input type="text" name="addres" placeholder="via" id="">
@@ -222,7 +233,9 @@
 
                 <div class="d-flex justify-content-between">
                     <button type="button"(click)="back()">INDIETRO</button>
-                    <button type="submit"  >INVIA</button>
+                    <button type="button"(click)="saved()">
+                        INVIA
+                    </button>
                 </div>
             </div>
 

@@ -5,7 +5,11 @@
         <div class=" col-12">
             <div class="">
                 <h2 class="font" style="text-align: center; color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 280%; padding-top: 5%; padding-bottom: 2%;">PREVENTIVI SERVIZI</h2>
-
+            </div>
+                
+            
+            <!--scaglione 1-->
+            <div class="container-fluid mirko" [class]="showControl(1,null)" >
                 <hr>
                 <br>
                 <div class="progress">
@@ -14,27 +18,24 @@
                 <br>
                 <hr>
                 <br>
-            </div>
             
-            <!--scaglione 1-->
-            <div class="container-fluid mirko" [class]="showControl(1,null)" >
-                <span class="margine fontt" style="font-size: xx-large; padding-top: 1%; padding-left: 2%; padding-bottom: 4%;">a quali servizi sei interessato? </span>
+                <span class="margine fontt" style="font-size: 300%; padding-top: 1%; padding-left: 2%; padding-bottom: 4%;">a quali servizi sei interessato? </span>
                 <hr>
                 <br>
                 <div class="col-12" style="display: flex; flex-direction: row;">
-                    <span class="col-4">pulizia   
+                    <span class="col-4 " style="font-size: x-large; font-family: sans-serif;">pulizia   
                         <label for="type">
                             <input type="radio" name="type" (click)="changeType('pul')" value="pulizia"> 
                         </label>
                     </span>
                 
-                    <span class="col-4">giardinaggio 
+                    <span class="col-4" style="font-size: x-large; font-family: sans-serif;">giardinaggio 
                         <label for="type">
                             <input type="radio" name="type" (click)="changeType('gia')" value="giardinaggio"> 
                         </label>
                     </span>
                 
-                    <span class="col-4" style="padding-bottom: 5%;">controllo degli infestanti 
+                    <span class="col-4" style="padding-bottom: 10%; font-size: x-large; font-family: sans-serif;">controllo degli infestanti 
                         <label for="type">
                             <input type="radio" name="type" (click)="changeType('con')" value="controllo degli infestanti"> 
                         </label>
@@ -47,22 +48,40 @@
             </div>
 
             <!--scaglione 2.1 - pulizie-->
-    
+           
             <div class="container-fluid mirko" [class]="showControl(2,'pul')" >
+                <hr>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 32%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">32%</div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">Pulizia condominiale
+                    <label style="margin-left: 1%;" for="type">
+                        <input type="radio" name="subType" value="pulizia condominiale"> 
+                    </label>
+                </div>
+                <hr>
+                <br>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">Sgrosso industrial
+                    <label style="margin-left: 1%;" for="type">
+                        <input type="radio" name="subType" value="Sgrosso industriale"> 
+                    </label>
+                </div>
+                <hr>
+                <br>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">Sgrosso civile
+                    <label style="margin-left: 1%;" for="type">
+                    <input type="radio" name="subType" value="Sgrosso civile"> 
+                    </label>
+                </div>
+                <hr>
+                <br>
 
-                <label for="type">pulizia condominiale
-                    <input type="radio" name="subType" value="pulizia condominiale"> 
-                </label>
 
-                <label for="type">Sgrosso industrial
-                    <input type="radio" name="subType" value="Sgrosso industriale"> 
-                </label>
-                
-                <label for="type">Sgrosso civile
-                <input type="radio" name="subType" value="Sgrosso civile"> 
-                </label>
-
-                <div class="margine" class="d-flex justify-content-between">
+                <div class="margine" class="d-flex justify-content-between" style="padding-bottom: 10%;">
                     <button type="button" (click)="back()">INDIETRO</button>
                     <button type="button" (click)="next()" >AVANTI</button>
                 </div>
@@ -71,24 +90,39 @@
             <!--scaglione 2.2 - giardinaggio-->
 
             <div class="container-fluid mirko" [class]="showControl(2,'gia')" >
-
-                <label for="type">Realizzazione o cura giardinaggio privato
-                    <input type="radio" name="subType" value="Realizzazione o cura giardinaggio privato"> 
-                </label>
-
-                <label for="type">Cura del verde condominialel
-                    <input type="radio" name="subType" value="Cura del verde condominiale"> 
-                </label>
-                
-                <label for="type">Trattamenti fitosanitari
-                    <input type="radio" name="subType" value="Trattamenti fitosanitari"> 
-                </label>
-
-                <label for="type">Potatura ad alto fusto
-                    <input type="radio" name="subType" value="Potatura ad alto fusto"> 
-                </label>
-
-                <div class="margine" class="d-flex justify-content-between">
+                <hr>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 32%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">32%</div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">Realizzazione o cura giardinaggio privato
+                    <label for="type">
+                        <input type="radio" name="subType" value="Realizzazione o cura giardinaggio privato"> 
+                    </label>
+                </div>
+                <hr>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">Cura del verde condominialel
+                    <label for="type">
+                        <input type="radio" name="subType" value="Cura del verde condominiale"> 
+                    </label>
+                </div>
+                <hr>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">Trattamenti fitosanitari
+                    <label for="type">
+                        <input type="radio" name="subType" value="Trattamenti fitosanitari"> 
+                    </label>
+                </div>
+                <hr>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">Potatura ad alto fusto
+                    <label for="type">
+                        <input type="radio" name="subType" value="Potatura ad alto fusto"> 
+                    </label>
+                </div>
+                <br>
+                <div class="margine" class="d-flex justify-content-between" style="padding-bottom: 10%;">
                     <button type="button" (click)="back()">INDIETRO</button>
                     <button type="button" (click)="next()" >AVANTI</button>
                 </div>
@@ -97,24 +131,39 @@
             <!--scaglione 2.2 - giardinaggio-->
 
             <div class="container-fluid mirko" [class]="showControl(2,'con')" >
-
-                <label for="type">Derattizzazione
-                    <input type="radio" name="subType" value="Derattizzazione"> 
-                </label>
-                
-                <label for="type">Disinfestazione insetti alati
-                    <input type="radio" name="subType" value="Disinfestazione insetti alati"> 
-                </label>
-
-                <label for="type">o	Debiattizzazione
-                    <input type="radio" name="subType" value="o	Debiattizzazione"> 
-                </label>
-
-                <label for="type">Allontanamento volatili
-                    <input type="radio" name="subType" value="Allontanamento volatili"> 
-                </label>
-
-                <div class="margine" class="d-flex justify-content-between">
+                <hr>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 32%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">32%</div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">
+                    <label for="type">Derattizzazione
+                        <input type="radio" name="subType" value="Derattizzazione"> 
+                    </label>
+                </div>
+                <hr>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">
+                    <label for="type">Disinfestazione insetti alati
+                        <input type="radio" name="subType" value="Disinfestazione insetti alati"> 
+                    </label>
+                </div>
+                <hr>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">
+                    <label for="type">o	Debiattizzazione
+                        <input type="radio" name="subType" value="o	Debiattizzazione"> 
+                    </label>
+                </div>
+                <hr>
+                <div style="display: flex; flex-direction: row; font-size: x-large; font-family: sans-serif;">
+                    <label for="type">Allontanamento volatili
+                        <input type="radio" name="subType" value="Allontanamento volatili"> 
+                    </label>
+                </div>
+                <hr>
+                <div class="margine" class="d-flex justify-content-between" style="padding-bottom: 10%;">
                     <button type="button" (click)="back()">INDIETRO</button>
                     <button type="button" (click)="next()" >AVANTI</button>
                 </div>
@@ -122,27 +171,41 @@
 
             <!--scaglione 3 - dati personali-->
             <div [class]="showControl(3,null)" >
-                <div class="progress-bar" role="progressbar" style="width: 32%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">32%</div>
-                <p>A chi invieremo il preventivo?</p>
-
-                <label for="name">
+                <hr>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 48%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">48%</div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <h2 style="font-size: x-large; font-family: sans-serif;">
+                    A chi invieremo il preventivo?
+                </h2>
+                <br>
+                <hr>
+                <br>
+                <label for="name" style=" margin-right: 2%;">
                     <input type="text" name="name" placeholder="nome">
                 </label>
 
-                <label for="surname">
+                <label for="surname"style=" margin-right: 2%;">
                     <input type="text" name="surname" placeholder="cognome">
                 </label>
 
-                <label for="email">
+                <label for="email"style=" margin-right: 2%;">
                     <input type="email" name="email" placeholder="email">
                 </label>
-
-                <label for="telephon">
+                <hr>
+                <br>
+                <label for="telephon"style=" margin-right: 2%;" class="col-2">
                     <input type="number" name="prefix" placeholder="+39" [defaultValue]="+39">
-                    <input type="number" name="telephon" placeholder="333 3333 3333">
+                    <input type="number" name="telephon" placeholder="3*********">
                 </label>
-
-                <div class="d-flex justify-content-between">
+                <hr>
+                <br>
+                
+                <div class="d-flex justify-content-between"style=" margin-right: 2%; padding-bottom: 10%;">
                     <button type="button" (click)="back()">INDIETRO</button>
                     <button type="button" (click)="next()" >AVANTI</button>
                 </div>
@@ -152,7 +215,14 @@
 
             <!-- scaglione 4 - tipo cliente -->
             <div [class]="showControl(4,null)" >
-                <div class="progress-bar" role="progressbar" style="width: 48%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">48%</div>
+                <hr>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 64%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">64%</div>
+                </div>
+                <br>
+                <hr>
+                <br>
                 <p>Sei un'azienda, un privato o richiedi il servizio per conto di un Ente Pubblico?</p>
                 <label for="typeCustomer">
                     <div>
@@ -176,7 +246,14 @@
 
             <!--scaglione 5 - cadenza interventi-->
             <div [class]="showControl(5,null)" >
-                <div class="progress-bar" role="progressbar" style="width: 64%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">64%</div>
+                <hr>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width:80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+                </div>
+                <br>
+                <hr>
+                <br>
                 <p>Sei interessato a un singolo intervento o a un piano di mantenimento delle aree verdi?</p>
                 <label for="times">
                     <div>
@@ -204,7 +281,14 @@
 
             <!--scaglione - 6 - dettagli interventi-->
             <div [class]="showControl(6,null)" >
-                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+                <hr>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 96%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">96%</div>
+                </div>
+                <br>
+                <hr>
+                <br>
                 <p>inserire maggiori dettagli per l'intervento</p>
 
                 <textarea name="" id="" cols="30" rows="10"></textarea>
@@ -215,6 +299,14 @@
 
             <!--scaglione - 7 - indirizzo -->
             <div [class]="showControl(7,null)" >
+                <hr>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+                </div>
+                <br>
+                <hr>
+                <br>
                 <p>Presso quale indirizzo sarà effettuato l'intervento?</p>
                 <label for="addres">
                     <input type="text" name="addres" placeholder="via" id="">

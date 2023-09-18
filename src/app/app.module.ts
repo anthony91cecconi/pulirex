@@ -23,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MissionComponent } from './pages/components/mission/mission.component';
 import { ContattiComponent } from './pages/contatti/contatti.component';
 import { PulizieComponent } from './pages/pulizie/pulizie.component';
+import { PreventiviComponent } from './pages/preventivi/preventivi.component';
+import { PreventivoComponent } from './pages/preventivi/preventivo/preventivo.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { PulizieComponent } from './pages/pulizie/pulizie.component';
     HeadImmagesEditsComponent,
     MissionComponent,
     ContattiComponent,
-    PulizieComponent
+    PulizieComponent,
+    PreventiviComponent,
+    PreventivoComponent
   ],
   imports: [
     BrowserModule,

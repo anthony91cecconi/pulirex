@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+<div class="d-flex"  >
+    <ul class="col-3" style="border-right: 1px solid black; height: 100%;height: 100%; ">
+        <!-- lista richieste preventivi -->
+        <li *ngFor="let preventive of preventives;" (click)="changeVision(preventive)">
+            {{preventive.name}} - {{preventive.surname}}
+            <hr>
+            {{preventive.subType}}
+        </li>
+    </ul>
+    <div>
+        <!-- dettagli richieste preventivi -->
+        <app-preventivo [preventive]="vision" ></app-preventivo>
+    </div>
+</div>

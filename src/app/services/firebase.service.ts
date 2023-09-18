@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { HomeImmageIntesation } from '../models/home.immages.model';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { Preventive } from '../models/prevent.model';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,11 @@ export class FirebaseService {
 
   insertFile( file : File , path :string ){
     return this.http.post("gs://pulirex-21e94.appspot.com" + path + "/.json", file);
+  }
+
+  insertRequestPreventivo(path : string,body: Preventive ){
+    console.log("quasi")
+    return this.http.post( "https://pulirex-21e94-default-rtdb.firebaseio.com"+path+ "/.json", body  )
   }
 
 }

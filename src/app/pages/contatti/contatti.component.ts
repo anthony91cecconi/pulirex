@@ -13,6 +13,10 @@ export class ContattiComponent {
   index : number = 1;
   service : string | null = null;
 
+  upload : number[] = [ 0,16,32,48,64,80,96,100 ]
+
+
+
   constructor(private fire:FirebaseService){
     this.mail = new FormGroup(
       {
@@ -76,6 +80,10 @@ export class ContattiComponent {
     let date2 = new Date().getMonth();
     let date3 = new Date().getFullYear();
     this.fire.insertRequestPreventivo(`/preventivi/richieste`,this.mail.value).subscribe()
+  }
+
+  widt(){
+    return  'width:'+ this.upload[this.index] +'%;'
   }
 
 

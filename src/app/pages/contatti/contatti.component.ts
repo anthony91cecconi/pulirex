@@ -78,13 +78,5 @@ export class ContattiComponent {
     this.fire.insertRequestPreventivo(`/preventivi/richieste`,this.mail.value).subscribe()
   }
 
-  /*
-  test(){
-
-
-
-    console.log(this.mail.value)
-  }*/
-
 
 }

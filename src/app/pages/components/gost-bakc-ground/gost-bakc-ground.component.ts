@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GhostBG } from 'src/app/models/ghost.model';
 
 @Component({
   selector: 'app-gost-bakc-ground',
@@ -8,20 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GostBakcGroundComponent implements OnInit{
   @Input() data : any;
 
-  texts! : text[];
+  texts! : GhostBG[];
 
-  text! : text | null;
+  text! : GhostBG | null;
 
   ngOnInit(): void {
     console.log(this.data)
     this.texts = this.data;
-    this.text = this.texts[0];
+    this.text = this.data[0];
   }
 
-}
-
-type text = {
-  title:string;
-  content:string;
-  immage: string;
 }

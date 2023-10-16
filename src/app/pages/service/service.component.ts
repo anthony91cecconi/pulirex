@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ServicePage } from 'src/app/models/services.page.model';
+import { ServicesPagesService } from 'src/app/services/services-pages.service';
 
 @Component({
   selector: 'app-service',
@@ -7,9 +10,23 @@ import { Component } from '@angular/core';
 })
 export class ServiceComponent {
 
-  bgImmages: string[] =[
-    "https://picsum.photos/id/10/200/300"
-  ];
+  servicePage!: ServicePage;
+  urlParam : string ="";
+
+  constructor(
+      private serv :ServicesPagesService,
+      private route: ActivatedRoute
+    ){
+      this.urlParam = route.snapshot.params['service'];
+
+    this.serv.services.forEach(
+      el => {
+        if (el.title == this.urlParam) {
+          this.servicePage = el;
+        }
+      }
+    )
+  }
 
   textGost = [
     {
@@ -17,5 +34,7 @@ export class ServiceComponent {
       content: "questo è un testo di prova"
     }
   ]
+
+  
 
 }

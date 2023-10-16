@@ -1,10 +1,10 @@
 <div>
     <app-navbar></app-navbar>
-    <!--<app-head-immages [data]=" bgImmages "></app-head-immages>-->
+    <app-head-immages [data]="servicePage.headImmage"></app-head-immages>
 
     <div class="d-flex justify-content-center" >
         <div class="text-center">
-            <h1><span class="red">titolo</span> servizio</h1>
+            <h1><span class="red">{{servicePage.title}}</span> servizio</h1>
             <hr class="red" >
         </div>
     </div>
@@ -12,7 +12,7 @@
     <app-split-text></app-split-text>
 
     <div>
-        carosello con foto
+        <app-carosel></app-carosel>
     </div>
 
     <app-gost-bakc-ground [data]="textGost"  ></app-gost-bakc-ground>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthFireService } from 'src/app/services/auth.fire.service';
+import { ServicesPagesService } from 'src/app/services/services-pages.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,12 @@ import { AuthFireService } from 'src/app/services/auth.fire.service';
 })
 export class NavbarComponent {
 
-  constructor( private auth : AuthFireService ){
+  sivices! : string[];
 
+  constructor( private auth : AuthFireService, private serv1 : ServicesPagesService ){
+    this.sivices = this.serv1.services.map(el => {
+      return el.title  
+    })
   }
 
   isLog(){

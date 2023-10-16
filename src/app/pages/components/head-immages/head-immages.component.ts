@@ -75,8 +75,8 @@ export class HeadImmagesComponent implements OnInit {//, OnDestroy{
   }
 
   bgReturn() :string{
-
-    return `url(${this.bgTest})`
+    console.log(`url(${this.bgTest.immageUrl})`)
+    return `url(${this.bgTest.immageUrl})`
   }
   
 }

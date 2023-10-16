@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HomeImmageIntesation } from 'src/app/models/home.immages.model';
 
 @Component({
   selector: 'app-chisiamo',
@@ -8,8 +9,20 @@ import { Component } from '@angular/core';
 export class ChisiamoComponent {
 
 
-  bgImmages: string[] =[
-    "https://picsum.photos/id/1/200/300"
+  bgImmages: HomeImmageIntesation[] =[
+    {
+      id:null,
+      title:"pulizie",
+      immageUrl :"../../assets/imgs/pulizie.jpg",
+      titleOne : null,
+      textOne : null,
+      titleTwo : null,
+      textTwo :  null,
+      titleTree :  null,
+      textTree :  null,
+      titleFour :  null,
+      textFour :  null
+    }
   ];
 
   textGost = [

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SplitTextComponent } from './split-text.component';
+import { StafComponent } from './staf.component';
 
-describe('SplitTextComponent', () => {
-  let component: SplitTextComponent;
-  let fixture: ComponentFixture<SplitTextComponent>;
+describe('StafComponent', () => {
+  let component: StafComponent;
+  let fixture: ComponentFixture<StafComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SplitTextComponent]
+      declarations: [StafComponent]
     });
-    fixture = TestBed.createComponent(SplitTextComponent);
+    fixture = TestBed.createComponent(StafComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
